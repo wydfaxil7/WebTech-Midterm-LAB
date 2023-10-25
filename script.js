@@ -6,5 +6,5 @@ faqItems.forEach((faq) =>{
         const faqText = faq.querySelector('.faq-text');
         faqText.classList.toggle('.active');
         toggleButton.classList.toggle('.active');
-    })
-})
+    });
+});

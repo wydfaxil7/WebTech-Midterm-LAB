@@ -110,3 +110,10 @@ h1 {
   display: block;
 }
 
+.faq-toggle.active .fa-times {
+    display: block;
+}
+
+.faq-toggle.active .fa-chevron-down {
+    display: none;
+}

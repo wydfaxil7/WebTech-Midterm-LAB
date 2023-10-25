@@ -1,10 +1,20 @@
-const faqItems = document.querySelectorAll('.faq');
+/*const toggles = document.querySelectorAll('.faq-toggle');
 
-faqItems.forEach((faq) =>{
-    const toggleButton = faq.querySelector('.faq-toggle');
-    toggleButton.addEventListener('click', () =>{
-        const faqText = faq.querySelector('.faq-text');
-        faqText.classList.toggle('.active');
-        toggleButton.classList.toggle('.active');
+*/
+
+const toggles = document.querySelectorAll('.faq-toggle');
+
+toggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+        const faq = toggle.closest('.faq');
+        if (faq.classList.contains('active')) {
+            faq.remove(); // Removes the FAQ card
+        } else {
+            document.querySelectorAll('.faq').forEach(faqItem => {
+                faqItem.classList.remove('active');
+            });
+            faq.classList.add('active');
+        }
     });
 });
+

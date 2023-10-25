@@ -5,5 +5,6 @@ faqItems.forEach((faq) =>{
     toggleButton.addEventListener('click', () =>{
         const faqText = faq.querySelector('.faq-text');
         faqText.classList.toggle('.active');
+        toggleButton.classList.toggle('.active');
     })
 })
